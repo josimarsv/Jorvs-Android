@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin_register" >
+
+    <EditText
+        android:id="@+id/etPaymentAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/text_amount"
+        android:inputType="textEmailAddress"
+        android:singleLine="true" />
+
+    <com.automated.taxinow.driver.widget.MyFontTextView
+        android:id="@+id/btnPaymentSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:text="@string/text_send"
+        android:textColor="@color/white" />
+
+</LinearLayout>

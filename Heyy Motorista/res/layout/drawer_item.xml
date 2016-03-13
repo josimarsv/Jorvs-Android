@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="11.0dip" >
+
+    <ImageButton
+        android:id="@+id/ivMenuImage"
+        android:layout_width="@dimen/menu_item_size"
+        android:layout_height="@dimen/menu_item_size"
+        android:layout_margin="@dimen/activity_margin_register"
+        android:layout_marginLeft="15.0dip"
+        android:background="@null"
+        android:scaleType="fitXY" />
+
+    <com.automated.taxinow.driver.widget.MyFontTextView
+        android:id="@+id/tvMenuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:gravity="center_vertical"
+        android:text="Large Text"
+        android:textColor="@color/color_text_menu"
+        android:textSize="@dimen/drawer_font_size" />
+
+</LinearLayout>

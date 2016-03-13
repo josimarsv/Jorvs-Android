@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/map_margin_bottom"
+     tools:context=".MainDrawerActivity" >
+     
+   <!-- android:background="@drawable/bg_splash" -->
+    
+    <!--      <VideoView
+             android:id="@+id/video"
+             android:layout_width="match_parent"
+             android:layout_height="fill_parent"
+             android:layout_gravity="fill_vertical" /> -->
+    
+        <TextView
+            android:id="@+id/ivAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@null"
+            android:text="@string/app_name"
+            android:fontFamily="sans-serif-thin"   
+            android:textColor="@color/color_text"
+            android:textSize="@dimen/image_type_height_width"
+            
+             />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivAppName"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_margin_register"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/btn_signin"
+                android:text="@string/text_signin"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/btn_register"
+                android:text="@string/text_register"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+</LinearLayout>

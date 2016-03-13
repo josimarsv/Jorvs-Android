@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_feedback"
+            android:orientation="horizontal" >
+
+            <com.automated.taxinow.driver.widget.MyFontTextView
+                android:id="@+id/tvClientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_feedback_margin_left"
+                android:text="Samantha Ayrton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_feedback_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llTop"
+            android:background="@drawable/bg_blue"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RatingBar
+                android:id="@+id/ratingFeedback"
+                style="@style/feedbackRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_feedback_margin_left"
+                android:rating="0"
+                android:stepSize="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ivFeedbackDriverImage"
+            android:layout_width="@dimen/dimen_feedback_image_width"
+            android:layout_height="@dimen/dimen_feedback_image_height"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dimen_feedback_image_left"
+            android:src="@drawable/user"
+            app:border_color="@color/skyblue"
+            app:border_width="@dimen/dimen_history_padding" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/progressbar" />
+    </RelativeLayout>
+
+</RelativeLayout>

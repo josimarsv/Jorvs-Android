@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="#947E00"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal"
+            android:text="Voice Search Details" />
+    </LinearLayout>
+    
+    <View android:id="@+id/titleDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#947E00" />
+    
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver ID : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal"
+            />
+
+        <TextView
+            android:id="@+id/driverId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car"
+            android:textSize="16sp" 
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver Name : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal"/>
+
+        <TextView
+            android:id="@+id/driverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unknown"
+            android:textSize="16sp" 
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone : "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/driverPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver Bio : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base Price : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/driverPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver rating : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/driverRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Time Taken : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/driverLasttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Details : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/driverVehicleInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost/KM : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/driverCostPerkm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Location : "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/driverCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal" />
+
+    </LinearLayout>
+    
+    
+    
+    <!-- <RadioGroup
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/mygpsloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+    	android:textStyle="normal"
+        android:text="My GPS location for pickup" />
+    <RadioButton
+        android:id="@+id/myenterloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+    	android:textStyle="normal"
+        android:text="Enter pickup location" />
+    </RadioGroup> -->
+   <!--  <EditText
+        android:id="@+id/mypickloc"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pickup address"
+        android:inputType="text"
+        
+        android:fontFamily="sans-serif-light"
+    	android:textStyle="normal"
+        android:visibility="gone"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText> -->
+
+    <!-- <Button
+        android:textSize="16sp"
+        android:id="@+id/driverDropLocBtn"
+        android:background="@drawable/my_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+    	android:textStyle="normal"
+        android:text="Enter drop location" /> -->
+
+    <!-- <EditText
+        android:id="@+id/driverDropLoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:hint="Drop Location"
+        android:inputType="text"
+        android:fontFamily="sans-serif-light"
+    	android:textStyle="normal"
+        android:visibility="gone"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText> -->
+	</LinearLayout>
+	
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/driverSubmitLinLay"
+        android:visibility="visible"
+        
+         >
+
+        <Button
+            android:background="@color/color_text"
+            android:id="@+id/driverCancelBtn"
+            android:layout_width="0dp"
+            android:layout_margin="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal"
+            android:text="Dismiss" />
+
+        <!-- <Button
+            android:background="@drawable/my_button"
+            android:id="@+id/driverReqBtn"
+            android:layout_width="0dp"
+            android:layout_margin="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+    		android:textStyle="normal"
+            android:text="Request" /> -->
+
+    </LinearLayout>
+    
+
+</LinearLayout>

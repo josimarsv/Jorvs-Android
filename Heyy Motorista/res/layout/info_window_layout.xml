@@ -1,0 +1,10 @@
+<com.automated.taxinow.driver.widget.MyFontTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/markerBubblePickMeUp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pin_detail_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:text="@string/my_location"
+    android:textColor="@color/white" />

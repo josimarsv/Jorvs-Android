@@ -1,0 +1,308 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_profile" >
+
+        <RelativeLayout
+            android:id="@+id/relProfileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/ivProfileProfile"
+                android:layout_width="@dimen/dimen_profile_image_width"
+                android:layout_height="@dimen/dimen_profile_image_height"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen_profile_margin_left"
+                android:src="@drawable/user"
+                app:border_color="@color/white"
+                app:border_width="@dimen/dimen_history_padding" />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                layout="@layout/progressbar" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_profile_margin_top"
+            android:layout_toRightOf="@id/relProfileImage"
+            android:orientation="vertical" >
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileFName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/text_fname"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/dimen_profile_textsize" />
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileLName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_profile_margin_top"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/text_lname"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/dimen_profile_textsize" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relTop" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin_feedback"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_profile_padding_bottom"
+            android:paddingRight="@dimen/activity_margin_feedback"
+            android:paddingTop="@dimen/dimen_profile_padding" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext" >
+
+                <com.automated.taxinow.driver.widget.MyFontEdittextView
+                    android:id="@+id/etProfileEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/text_email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/dimen_history_margin_left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@drawable/color" />
+
+                <com.automated.taxinow.driver.widget.MyFontButton
+                    android:id="@+id/btnProfileEmailInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginBottom="@dimen/activity_margin_register"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:background="@drawable/info"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+            </LinearLayout>
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileCurrentPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_margin_feedback"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_current_pass"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color" />
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_new_pass"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color" />
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileRetypePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_retype_pass"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="horizontal" >
+
+                <com.automated.taxinow.driver.widget.MyFontTextView
+                    android:id="@+id/tvProfileCountryCode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <com.automated.taxinow.driver.widget.MyFontEdittextView
+                    android:id="@+id/etProfileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:ems="10"
+                    android:hint="@string/text_number"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/dimen_history_margin_left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@drawable/color" />
+            </LinearLayout>
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_address"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color" />
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_bio"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color" />
+
+            <com.automated.taxinow.driver.widget.MyFontEdittextView
+                android:id="@+id/etProfileZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_zip"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext" >
+
+                <com.automated.taxinow.driver.widget.MyFontEdittextView
+                    android:id="@+id/etProfileModel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_client_image_margin_top"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="@string/text_taxi_model"
+                    android:paddingLeft="@dimen/dimen_history_margin_left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@drawable/color" />
+
+                <com.automated.taxinow.driver.widget.MyFontButton
+                    android:id="@+id/btnProfileModelInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginBottom="@dimen/activity_margin_register"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:background="@drawable/info"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin_feedback"
+                android:background="@drawable/bg_edittext" >
+
+                <com.automated.taxinow.driver.widget.MyFontEdittextView
+                    android:id="@+id/etProfileVehicleNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_margin_register"
+                    android:layout_marginTop="@dimen/activity_margin_mainscreen"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="@string/text_taxi_number"
+                    android:paddingLeft="@dimen/dimen_history_margin_left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@drawable/color" />
+
+                <com.automated.taxinow.driver.widget.MyFontButton
+                    android:id="@+id/btnProfileVehicleNoInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginBottom="@dimen/activity_margin_register"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:background="@drawable/info"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+            </LinearLayout>
+.
+        </LinearLayout>
+    </ScrollView>
+
+    <com.automated.taxinow.driver.widget.MyFontButton
+        android:id="@+id/tvProfileSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_bottom"
+        android:gravity="center"
+        android:text="@string/text_submit"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

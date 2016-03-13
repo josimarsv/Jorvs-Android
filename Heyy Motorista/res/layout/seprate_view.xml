@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llseprateView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="1dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/black_dot" />
+
+    <com.automated.taxinow.driver.widget.MyFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:drawablePadding="10.0dip"
+        android:gravity="center_vertical"
+        android:text="@string/text_or"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="1dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/black_dot" />
+
+</LinearLayout>

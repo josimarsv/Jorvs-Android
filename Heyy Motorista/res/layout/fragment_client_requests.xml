@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_back_color" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!--
+    <RelativeLayout
+        android:id="@+id/rlClientReqTimeLeft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/pbClientReqTime"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:minHeight="20dp"
+            android:progress="10"
+            android:progressDrawable="@drawable/customprogress" />
+
+        <com.automated.taxinow.driver.widget.MyFontTextView
+            android:id="@+id/tvClentReqRemainTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+        -->
+
+        <include
+            android:id="@+id/clientDetailView"
+            layout="@layout/include_detail_view"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/relMap"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:layout_weight="1" >
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/clientReqMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/btnMyLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:paddingBottom="@dimen/dimen_history_image_height"
+                android:src="@drawable/ub_button_mylocation" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearOffline"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+             >
+
+            <ImageView
+                android:id="@+id/ivAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:background="@null"
+                android:src="@drawable/app_name" 
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvOffline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivAppName"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:text="@string/text_go_online_to"
+                android:textSize="@dimen/ub_textsize_big" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <LinearLayout
+                android:id="@+id/llAcceptReject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.automated.taxinow.driver.widget.MyFontButton
+                    android:id="@+id/btnClientAccept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="@string/text_accept"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/divider" />
+
+                <com.automated.taxinow.driver.widget.MyFontButton
+                    android:id="@+id/btnClientReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="@string/text_reject"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.automated.taxinow.driver.widget.MyFontButton
+        android:id="@+id/btnClientReqRemainTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:text="58"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/dimen_waiting_time"
+        android:visibility="gone" />
+
+    <com.automated.taxinow.driver.widget.MyFontButton
+        android:id="@+id/btnOffline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="@string/text_go_offline"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

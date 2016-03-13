@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/clientDetailView"
+        layout="@layout/include_detail_view" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/jobMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btnNavigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="@dimen/activity_margin_register"
+            android:layout_marginTop="@dimen/activity_margin_register"
+            android:background="@drawable/navigation"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.automated.taxinow.driver.widget.MyFontTextView
+            android:id="@+id/tvJobTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.5"
+            android:drawablePadding="@dimen/feedback_padding"
+            android:drawableTop="@drawable/time"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="0 MINS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_app_gray" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@drawable/line_divider" />
+
+        <com.automated.taxinow.driver.widget.MyFontTextView
+            android:id="@+id/tvJobDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_history_margin_top"
+            android:layout_weight="1.5"
+            android:drawablePadding="@dimen/feedback_padding"
+            android:drawableTop="@drawable/miles"
+            android:gravity="center"
+            android:text="0"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_app_gray" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@drawable/line_divider" />
+
+        <com.automated.taxinow.driver.widget.MyFontTextView
+            android:id="@+id/tvPaymentType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.5"
+            android:drawablePadding="@dimen/feedback_padding"
+            android:drawableTop="@drawable/payment"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="CASH"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_app_gray" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:src="@drawable/line_divider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.6" >
+
+            <com.automated.taxinow.driver.widget.MyFontTextView
+                android:id="@+id/tvJobCallClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/call_user"
+                android:drawablePadding="@dimen/feedback_padding"
+                android:gravity="center_vertical"
+                android:text="@string/text_call"
+                android:textColor="@color/color_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.automated.taxinow.driver.widget.MyFontTextView
+        android:id="@+id/tvJobStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bottom"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+</LinearLayout>
